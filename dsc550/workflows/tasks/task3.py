@@ -18,6 +18,18 @@ interim_path = data_path / 'interim/'
 processed_path = data_path / 'processed/'
 
 def task3(param1):
+    """Task 3 takes the training data from Task 2 and runs through it through
+    a data model pipeline. Here we are testing Naive Bayes (MultinomialNB) and
+    Logistic Regression with both and L1 and L2 penalty and some hyperparameter
+    optimization searching.  The resulting model is outputted to the model folder.
+
+    Args:
+        param1 (str): Filename to process
+
+    Returns:
+        bool: True if the process succeeds in writing the output files,
+        False if it fails.
+    """
 
     # Load X_Training Data
     pickle_in_X_train_path = interim_path / (param1 + '_X_train.pkl')

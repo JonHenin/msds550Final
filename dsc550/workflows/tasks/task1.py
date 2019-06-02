@@ -22,6 +22,18 @@ def my_preprocessor(text):
 
 
 def task1(param1):
+    """Task 1 cleans up the data file in the source/reddit folder,
+    splits the data into vectorized features and targets and then outputs a pickle
+    file of each.
+
+    Args:
+        param1 (str): Filename to process
+
+    Returns:
+        bool: True if the process succeeds in writing the output files,
+        False if it fails.
+    """
+
     file_path = source_path / (param1 + '.jsonl')
 
     # Import file into a dataframe

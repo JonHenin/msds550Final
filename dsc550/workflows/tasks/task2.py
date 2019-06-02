@@ -15,6 +15,19 @@ interim_path = data_path / 'interim/'
 processed_path = data_path / 'processed/'
 
 def task2(param1):
+    """Task 2 splits the Features and Targets from Task 1 into 4 datasets.
+    X_train
+    X_test
+    y_train
+    y_test
+
+    Args:
+        param1 (str): Filename to process
+
+    Returns:
+        bool: True if the process succeeds in writing the output files,
+        False if it fails.
+    """
 
     # Load Features
     pickle_in_features_path = interim_path / (param1 + '_features.pkl')

@@ -14,6 +14,16 @@ interim_path = data_path / 'interim/'
 processed_path = data_path / 'processed/'
 
 def task4(param1):
+    """Task 4 takes the testing data form Task 2 and the model data from Task 3
+    and creates a report of a few metrics for analysis of the model.
+
+    Args:
+        param1 (str): Filename to process
+
+    Returns:
+        bool: True if the process succeeds in writing the output files,
+        False if it fails.
+    """
 
     # Load Model
     pickle_in_model_path = model_path / (param1 + '_model.pkl')
